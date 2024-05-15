@@ -1,0 +1,31 @@
+﻿@model Slider
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Title</label>
+                    <input asp-for="Title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                    <span asp-validation-for="Title"></span> 
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Description</label>
+                    <input asp-for="Description" class="form-control" id="exampleInputPassword1">
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">RedirectUrl</label>
+                    <input asp-for="RedirectUrl" class="form-control" id="exampleInputPassword1" >
+                    <span asp-validation-for="RedirectUrl"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Image</label>
+                    <input asp-for="ImageFile" class="form-control" id="exampleInputPassword1">
+                    <span asp-validation-for="ImageFile"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button> 
+            </form>
+        </div>
+    </div>
+</div>
